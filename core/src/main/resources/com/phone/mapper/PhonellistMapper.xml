@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.phone.mapper.PhonellistMapper">
+    <resultMap id="BaseResultMap" type="com.phone.dto.Phonellist">
+        <result column="id" property="id" jdbcType="DECIMAL" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="phone" property="phone" jdbcType="DECIMAL" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="parea" property="parea" jdbcType="VARCHAR" />
+        <result column="sex" property="sex" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="selectByDemo" parameterType="com.phone.dto.Phonellist">
+        SELECT m.name,
+        m.email
+        FROM phonelist m
+    </select>
+
+</mapper>
